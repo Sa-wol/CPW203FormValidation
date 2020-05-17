@@ -6,10 +6,14 @@ function main() {
     resetErrorMessages();
     isTextPresent("first-name", "First name is required");
     isTextPresent("last-name", "Last name is required");
+    checkValidDate();
+}
+function checkValidDate() {
     var dobBox = document.getElementById("dob");
     var dob = dobBox.value;
     if (!isValidDate(dob)) {
-        dobBox.nextElementSibling.innerHTML = "Invalid format. (mm/dd/yyyy)";
+        var errSpan = document.getElementById("dob-span");
+        errSpan.innerHTML = "Invalid format. (mm/dd/yyyy)";
     }
 }
 function resetErrorMessages() {
