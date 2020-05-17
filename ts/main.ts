@@ -12,7 +12,7 @@ function changeHeading(){
     let red = Math.floor(Math.random() * 255 + 1);
     let green = Math.floor(Math.random() * 255 + 1);
     let blue = Math.floor(Math.random() * 255 + 1);
-    let color = "rgb(" + red + "," + green + "," + blue + ")";
+    let color = "rgb(" + red + "," + green + "," + blue + ")"
 
     console.log(color);
     heading.style.color = color;
@@ -24,12 +24,14 @@ function main():void{
     let msgHeading = document.createElement("h2");
     msgHeading.innerText = "Processing form";
     msgHeading.setAttribute("class", "message");
+    msgHeading.onclick = changeHeading;
+
     let h1 = document.querySelector("h1");
     h1.insertAdjacentElement("afterend", msgHeading);
 
     setTimeout(function(){
         msgHeading.remove();
-    }, 5000)
+    }, 20000)
 
     resetErrorMessages();
     isTextPresent("first-name", "First name is required");
