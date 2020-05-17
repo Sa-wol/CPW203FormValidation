@@ -2,6 +2,31 @@ form span{
     color: red;
 }
 
+h1{
+    text-align: center;
+}
+
+h1, form label, form button, form input{
+    font-family: 'Teko', sans-serif;
+}
+
+body{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+button{
+    padding: .75em;
+    border-radius: .2em;
+    background-color: darkgreen;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: darkblue;
+}
+
 input[type=text]{
     margin-bottom: 1em;
 }
